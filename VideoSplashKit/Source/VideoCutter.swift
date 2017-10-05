@@ -13,7 +13,7 @@ extension String {
     var convert: NSString { return (self as NSString) }
 }
 
-public class VideoCutter: NSObject {
+open class VideoCutter: NSObject {
     
     /**
      Block based method for crop video url
@@ -23,7 +23,7 @@ public class VideoCutter: NSObject {
      @param duration Total time, video length
      
      */
-    public func cropVideoWithUrl(videoUrl url: URL, startTime: CGFloat, duration: CGFloat, completion: ((_ videoPath:URL?, _ error: NSError?) -> Void)?) {
+    open func cropVideoWithUrl(videoUrl url: URL, startTime: CGFloat, duration: CGFloat, completion: ((_ videoPath:URL?, _ error: NSError?) -> Void)?) {
         
         DispatchQueue.global().async {
             
